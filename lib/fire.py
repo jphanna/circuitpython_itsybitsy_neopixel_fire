@@ -6,7 +6,12 @@ from micropython import const
 
 
 class Fire:
-    def __init__(self, pin, fType):
+    '''A representation of a flame using an ordinary LED
+       to display a flickering effect.  This is done by
+       varying the brightness and thre time the light is
+       on. '''
+    
+    def __init__(self, pin, fType='normal'):
         self.ItsyBitsy_Pins = {
             0: board.D0,
             1: board.D1,
@@ -27,7 +32,7 @@ class Fire:
         self._TICKS_HALFPERIOD = const(self._TICKS_PERIOD // 2)
 
     def _get_brightness(self):
-        if self.fire_type == "lantern":
+        if self.fire_type == 'lantern':
             return random.randrange(30000, 65535)
         else:
             return random.randrange(8000, 20000)
@@ -37,7 +42,7 @@ class Fire:
         return random.randrange(25, 200)
 
     def ticks_diff(self, ticks1, ticks2):
-        # "Compute the signed difference between two ticks values, assuming that they are within 2**28 ticks"
+        # 'Compute the signed difference between two ticks values, assuming that they are within 2**28 ticks'
         self.diff = (ticks1 - ticks2) & self._TICKS_MAX
         self.diff = (
             (self.diff + self._TICKS_HALFPERIOD) & self._TICKS_MAX
@@ -53,3 +58,4 @@ class Fire:
             self.current_moment = supervisor.ticks_ms()
             self.brightness = self._get_brightness()
             self.flicker_duration = self._get_flicker_duration()
+
