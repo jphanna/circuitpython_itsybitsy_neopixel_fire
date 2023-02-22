@@ -44,7 +44,7 @@ while True:
 ### neopixel.NeoPixel(pixel_pin, num_pixels, brightness=0.3, auto_write=False)
 | Arg | Notes |
 | ---- | ----- |
-| pixel_pin | Try using pin 5 of the ItsyBitsy M4 Express. I has level shifting to 5 volts for the neopixel data.|
+| pixel_pin | Try using pin 5 of the ItsyBitsy M4 Express. It has level shifting to 5 volts for the neopixel data.|
 | num_pixels | Set this to the number of neopixels in your strand. |
 | brightness | Set this to how bright you want the neopixels. |
 | auto_write | Leave this set to False. |
