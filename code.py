@@ -24,6 +24,7 @@ colors = {
     'HALLOWEENORANGE': (255, 77, 0),
     'FIREORANGE': (251, 139, 35),
     'FIREORANGE2': (227, 140, 45),
+    'FIREORANGE3': (222, 120, 31),
     'ORANGE': (235, 97, 35),
     'ORANGEYELLOW': (255, 100, 0),
     'YELLOW': (255, 150, 0),
@@ -116,7 +117,7 @@ time.sleep(0.01)
 lantern = Fire(7, 'lantern')
 
 # flames = [REDORANGE, ORANGE]
-GC_COLOR = GC_COLORS['FIREORANGE2']
+GC_COLOR = GC_COLORS['FIREORANGE']
 
 while True:
     if random.randrange(0, 1000) == 500:
