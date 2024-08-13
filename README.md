@@ -14,7 +14,7 @@ A module to quickly set up a through-hole LED and/or neopixels strand to flicker
 ## Usage
 1. Download fire.py
 2. Upload it to your ItsyBitsy M4 Express.
-3. Import the module into your script (i.e. code.py):
+3. Import the module into your script (i.e. main.py):
 
 ```python
 from fire import Fire
